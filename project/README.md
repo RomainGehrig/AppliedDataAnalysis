@@ -27,9 +27,9 @@ To find out which votations have been discussed on Twitter, we looked at the has
   3. #lrens (Give more power to Swiss intelligenc agency)
   4. #rbi (Provide an universal income)
 
-The hashtag #abst16 is the more frequent tag, so we will use this votation to do our analysis. People don't always refer to that votation with the same hashtag, so we will need to find the other tag linked to it (for instance #sortiedunucleaire).
+The hashtag #abst16 is the more frequent tag, so we will use this votation to kickstart our analysis (we may extend to additionnal votations). People don't always refer to that votation with the same hashtag, so we will need to find the other tag linked to it (for instance #sortiedunucleaire).
 
-We wanted to base our analysis on the `sentiment` computed by Spinn3r, but unfortunately tweets have been mostly categorized as `NEUTRAL`. We will need to build our own classifier (reusing for instance our work on the last homework) to extract more meaningful infomations.
+We wanted to base our analysis on the `sentiment` computed by Spinn3r, but unfortunately tweets have been mostly categorized as `NEUTRAL` (for #lrens we have <5% classified `POSITVE` or `NEGATIVE`). We will need to build our own classifier (reusing for instance our work on the last homework) to extract more meaningful infomations. As illustrated in the notebook, we can see that the tweets are very polarized (at least with our human sensitivity) and would demand a careful analysis to classify automatically.
 
 # A list of internal milestones up until project milestone 2
 We will explore the Swiss Twitter dataset to understand which votations have been discussed on the platform and select a set of them.
