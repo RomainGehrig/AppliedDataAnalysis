@@ -1,8 +1,7 @@
 # Twitter Swiss Vote
 
-Final project for Applied Data Analysis (CS-401).
-
-By Romain Gehrig, Thierry Treyer and (null).
+Final project for Applied Data Analysis (CS-401).  
+By Romain Gehrig, Thierry Treyer.
 
 ## Introduction
 
@@ -150,3 +149,23 @@ We can now finally start analyzing the opinions of the people on those votations
 <iframe src="rbi_sentiment.html" width="100%" height="400px"></iframe>
 
 ## Conclusion
+
+It seems that using Twitter to estimate the opinion of the swiss population provide mitigated results.
+For the LRens votation, our analysis matched the opinions of the people.
+For the RBI votation, it is completely wrong.
+
+The reasons behind those results may be:
+
+  1. **The swiss population doesn't use Twitter enough**  
+     Over a whole year, having only thousands of tweets about a subject seems fairly low.
+     We saw the distribution of tweets in the state does not follow the distribution of voters.
+     It become hard to draw conclusions from the tweets if not enough people talk about the votations online.
+  2. **The classifier is not good enough**  
+     Taking a look at Spinn3r's sentiments, some of those seem really off.
+     But this is not surprising considering the tweets are in three different languages, none of them being English.
+     Also the classifier worked on the sentiment of the tweet and not the opinion in it, this might also skew the results.
+
+We also didn't notice a change of opinion through time.
+We saw the activity increase before the votation, but no shift of positive or negative sentiment about the subject of the votation.
+
+Considering all those conclusions, it seems that tweets does not represent the opinion of the swiss population.

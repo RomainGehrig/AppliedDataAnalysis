@@ -10,8 +10,8 @@
 </head>
 <body>
 <h1 id="twitter-swiss-vote">Twitter Swiss Vote</h1>
-<p>Final project for Applied Data Analysis (CS-401).</p>
-<p>By Romain Gehrig, Thierry Treyer and (null).</p>
+<p>Final project for Applied Data Analysis (CS-401).<br />
+By Romain Gehrig, Thierry Treyer.</p>
 <h2 id="introduction">Introduction</h2>
 <p>Social medias are now part of our day to day life: people use them to share their activities but also their opinions, traditional medias refer to social medias more and more often, they have become another medium for sharing informations and opinions. Those informations are for the most part freely available on the Internet, by tapping into it we may be able to gain some insights on the opinions of the population, learn about their concerns and issues.</p>
 <p>We took the context of votations to frame our analysis:</p>
@@ -214,5 +214,15 @@
 <iframe src="rbi_sentiment.html" width="100%" height="400px">
 </iframe>
 <h2 id="conclusion">Conclusion</h2>
+<p>It seems that using Twitter to estimate the opinion of the swiss population provide mitigated results. For the LRens votation, our analysis matched the opinions of the people. For the RBI votation, it is completely wrong.</p>
+<p>The reasons behind those results may be:</p>
+<ol style="list-style-type: decimal">
+<li><strong>The swiss population doesn't use Twitter enough</strong><br />
+Over a whole year, having only thousands of tweets about a subject seems fairly low. We saw the distribution of tweets in the state does not follow the distribution of voters. It become hard to draw conclusions from the tweets if not enough people talk about the votations online.</li>
+<li><strong>The classifier is not good enough</strong><br />
+Taking a look at Spinn3r's sentiments, some of those seem really off. But this is not surprising considering the tweets are in three different languages, none of them being English. Also the classifier worked on the sentiment of the tweet and not the opinion in it, this might also skew the results.</li>
+</ol>
+<p>We also didn't notice a change of opinion through time. We saw the activity increase before the votation, but no shift of positive or negative sentiment about the subject of the votation.</p>
+<p>Considering all those conclusions, it seems that tweets does not represent the opinion of the swiss population.</p>
 </body>
 </html>
