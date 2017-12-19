@@ -168,4 +168,4 @@ The reasons behind those results may be:
 We also didn't notice a change of opinion through time.
 We saw the activity increase before the votation, but no shift of positive or negative sentiment about the subject of the votation.
 
-Considering all those conclusions, it seems that tweets does not represent the opinion of the swiss population.
+Considering all those conclusions, it seems that swiss tweets do not represent the opinion of the swiss population.
