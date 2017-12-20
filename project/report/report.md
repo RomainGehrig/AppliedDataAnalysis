@@ -1,6 +1,6 @@
 # Twitter Swiss Vote
 
-Final project for Applied Data Analysis (CS-401).  
+Final project for Applied Data Analysis (CS-401).
 By Romain Gehrig and Thierry Treyer.
 
 ## Introduction
@@ -138,11 +138,13 @@ This votation had a long live on social networks before it actually was voted wi
 
 ![](hist-lrens.png)
 
-The illustration of the number of tweets per 1000 voters was chosen to show where the tech-savy users are, in this case around Zurich and Geneva and we don't think this is a coincidence that those cities are international ones!
+The illustration of the number of tweets per 1000 voters was chosen to show where the tech-savy users are, in this case around Zurich and Geneva and we don't think this is a coincidence that those cities are the most international in Switzerland.
+
+(Note: the map layers are opaque, so you can toggle each to compare easily between those.)
 
 <iframe src="lrens_tweets.html" width="100%" height="400px"></iframe>
 
-Both Twitter and the Swiss population approve this law!
+We can see that both Twitter and the Swiss population approve this law!
 
 <iframe src="lrens_sentiment.html" width="100%" height="400px"></iframe>
 
@@ -166,6 +168,12 @@ Those results make it hard to draw any conclusion from those graph.
 
 <iframe src="rbi_sentiment.html" width="100%" height="400px"></iframe>
 
+### Comparison
+
+While it is hard to find comparisons between the Twitter population and the Swiss population, we – at least – are able to make direct comparison between our two analyses to reveal a subtler pattern than by analysing the votations on their own. We can see a profound dip in tweets mentioning our tags of interest for weeks after the votation and while we don't know the reasons for sure, we can think of some: a general "ras-le-bol" around the matter, an acceptance time, less publicity (becomes less useful after a votation),... but the discussion seems to come back after a while !
+
+We already talked about this point but the activity is steadily increasing before the votation day, with some consequent variations between the different weeks, which would be interesting to correlate with the different media events around these dates.
+
 ## Conclusion
 
 It seems that using Twitter to estimate the opinion of the Swiss population provide mitigated results.
@@ -174,16 +182,23 @@ For the RBI votation, it is completely wrong.
 
 The reasons behind those results may be:
 
-  1. **The Swiss population doesn't use Twitter enough**  
+  1. **The Swiss population doesn't use Twitter enough**
      Over a whole year, having only thousands of tweets about a subject seems fairly low.
      We saw the distribution of tweets in the state does not follow the distribution of voters. There is a huge bias toward state that are more internationally oriented, like Geneva and Zurich.
      It become hard to draw conclusions from the tweets if not enough people talk about the votations online.
-  2. **The classifier is not good enough**  
+  2. **The classifier is not good enough**
      Taking a look at Spinn3r's sentiments, some of those seem really off.
      But this is not surprising considering the tweets are in three different languages, none of them being English.
      Also the classifier worked on the sentiment of the tweet and not the opinion in it, this might also skew the results.
+  3. **There is not enough information**
+     A political opinion is complex and difficult to express in 140 characters. To understand it with a computer is even harder.
 
 We also didn't notice a change of opinion through time.
 We saw the activity increase before the votation, but no shift of positive or negative sentiment about the subject of the votation.
 
 Considering all those elements, we learned more about the habits of the Swiss population when discussing votations on Twitter than their actual opinions related to these votations.
+
+
+## Post-mortem
+
+Working with Not-that-Big Data is definitively an experience we are not going to forget. This taught us about this strange spot between human scale data and Big Data, where there isn't enough data to just throw away what is not fitting our models. We learned to live with obscure and noisy data and to resign to the fact that, sometimes, you cannot extract a signal from the noise even with the best intentions. This was a humbling lesson we sure needed (maybe it would have been better if it wasn't during a big project, but that's life ¯\_(ツ)_/¯).

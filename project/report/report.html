@@ -10,8 +10,7 @@
 </head>
 <body>
 <h1 id="twitter-swiss-vote">Twitter Swiss Vote</h1>
-<p>Final project for Applied Data Analysis (CS-401).<br />
-By Romain Gehrig and Thierry Treyer.</p>
+<p>Final project for Applied Data Analysis (CS-401). By Romain Gehrig and Thierry Treyer.</p>
 <h2 id="introduction">Introduction</h2>
 <p>Social medias are now part of our day to day life: people use them to share their activities but also their opinions, traditional medias refer to social medias more and more often, they have become another medium for sharing informations and opinions. Those informations are for the most part freely available on the Internet, by tapping into it we may be able to gain some insights on the opinions of the population, learn about their concerns and issues.</p>
 <p>We took the context of votations to frame our analysis:</p>
@@ -201,10 +200,11 @@ By Romain Gehrig and Thierry Treyer.</p>
 <img src="hist-lrens.png" />
 
 </div>
-<p>The illustration of the number of tweets per 1000 voters was chosen to show where the tech-savy users are, in this case around Zurich and Geneva and we don't think this is a coincidence that those cities are international ones!</p>
+<p>The illustration of the number of tweets per 1000 voters was chosen to show where the tech-savy users are, in this case around Zurich and Geneva and we don't think this is a coincidence that those cities are the most international in Switzerland.</p>
+<p>(Note: the map layers are opaque, so you can toggle each to compare easily between those.)</p>
 <iframe src="lrens_tweets.html" width="100%" height="400px">
 </iframe>
-<p>Both Twitter and the Swiss population approve this law!</p>
+<p>We can see that both Twitter and the Swiss population approve this law!</p>
 <iframe src="lrens_sentiment.html" width="100%" height="400px">
 </iframe>
 <h3 id="rbi">RBI</h3>
@@ -219,16 +219,20 @@ By Romain Gehrig and Thierry Treyer.</p>
 <p>We then have some surprising results. We have Wallis that looks like a strong advocate for the RBI, but in the votation results it is one of the lowest proportion of 'yes' in the country. And Jury was a partisan of this law both in tweets and in votes. Those results make it hard to draw any conclusion from those graph.</p>
 <iframe src="rbi_sentiment.html" width="100%" height="400px">
 </iframe>
+<h3 id="comparison">Comparison</h3>
+<p>While it is hard to find comparisons between the Twitter population and the Swiss population, we – at least – are able to make direct comparison between our two analyses to reveal a subtler pattern than by analysing the votations on their own. We can see a profound dip in tweets mentioning our tags of interest for weeks after the votation and while we don't know the reasons for sure, we can think of some: a general &quot;ras-le-bol&quot; around the matter, an acceptance time, less publicity (becomes less useful after a votation),... but the discussion seems to come back after a while !</p>
+<p>We already talked about this point but the activity is steadily increasing before the votation day, with some consequent variations between the different weeks, which would be interesting to correlate with the different media events around these dates.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>It seems that using Twitter to estimate the opinion of the Swiss population provide mitigated results. For the LRens votation, our analysis matched the opinions of the people. For the RBI votation, it is completely wrong.</p>
 <p>The reasons behind those results may be:</p>
 <ol style="list-style-type: decimal">
-<li><strong>The Swiss population doesn't use Twitter enough</strong><br />
-Over a whole year, having only thousands of tweets about a subject seems fairly low. We saw the distribution of tweets in the state does not follow the distribution of voters. There is a huge bias toward state that are more internationally oriented, like Geneva and Zurich. It become hard to draw conclusions from the tweets if not enough people talk about the votations online.</li>
-<li><strong>The classifier is not good enough</strong><br />
-Taking a look at Spinn3r's sentiments, some of those seem really off. But this is not surprising considering the tweets are in three different languages, none of them being English. Also the classifier worked on the sentiment of the tweet and not the opinion in it, this might also skew the results.</li>
+<li><strong>The Swiss population doesn't use Twitter enough</strong> Over a whole year, having only thousands of tweets about a subject seems fairly low. We saw the distribution of tweets in the state does not follow the distribution of voters. There is a huge bias toward state that are more internationally oriented, like Geneva and Zurich. It become hard to draw conclusions from the tweets if not enough people talk about the votations online.</li>
+<li><strong>The classifier is not good enough</strong> Taking a look at Spinn3r's sentiments, some of those seem really off. But this is not surprising considering the tweets are in three different languages, none of them being English. Also the classifier worked on the sentiment of the tweet and not the opinion in it, this might also skew the results.</li>
+<li><strong>There is not enough information</strong> A political opinion is complex and difficult to express in 140 characters. To understand it with a computer is even harder.</li>
 </ol>
 <p>We also didn't notice a change of opinion through time. We saw the activity increase before the votation, but no shift of positive or negative sentiment about the subject of the votation.</p>
 <p>Considering all those elements, we learned more about the habits of the Swiss population when discussing votations on Twitter than their actual opinions related to these votations.</p>
+<h2 id="post-mortem">Post-mortem</h2>
+<p>Working with Not-that-Big Data is definitively an experience we are not going to forget. This taught us about this strange spot between human scale data and Big Data, where there isn't enough data to just throw away what is not fitting our models. We learned to live with obscure and noisy data and to resign to the fact that, sometimes, you cannot extract a signal from the noise even with the best intentions. This was a humbling lesson we sure needed (maybe it would have been better if it wasn't during a big project, but that's life ¯_(ツ)_/¯).</p>
 </body>
 </html>
