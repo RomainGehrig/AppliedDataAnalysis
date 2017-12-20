@@ -11,7 +11,7 @@
 <body>
 <h1 id="twitter-swiss-vote">Twitter Swiss Vote</h1>
 <p>Final project for Applied Data Analysis (CS-401).<br />
-By Romain Gehrig, Thierry Treyer.</p>
+By Romain Gehrig and Thierry Treyer.</p>
 <h2 id="introduction">Introduction</h2>
 <p>Social medias are now part of our day to day life: people use them to share their activities but also their opinions, traditional medias refer to social medias more and more often, they have become another medium for sharing informations and opinions. Those informations are for the most part freely available on the Internet, by tapping into it we may be able to gain some insights on the opinions of the population, learn about their concerns and issues.</p>
 <p>We took the context of votations to frame our analysis:</p>
@@ -196,21 +196,27 @@ By Romain Gehrig, Thierry Treyer.</p>
 <p>We can now finally start analyzing the opinions of the people on those votations!</p>
 <h2 id="the-votations">The votations</h2>
 <h3 id="lrens">LRens</h3>
+<p>This votation had a long live on social networks before it actually was voted with around 20 tweets about it per week for about 8 month, then we can observe a constant augmentation of the volume of the tweets seven weeks before the votation due to progressive discussion about it in the social environment.</p>
 <div class="figure">
 <img src="hist-lrens.png" />
 
 </div>
+<p>The illustration of the number of tweets per 1000 voters was chosen to show where the tech-savy users are, in this case around Zurich and Geneva and we don't think this is a coincidence that those cities are international ones!</p>
 <iframe src="lrens_tweets.html" width="100%" height="400px">
 </iframe>
+<p>Both Twitter and the swiss population approve this law!</p>
 <iframe src="lrens_sentiment.html" width="100%" height="400px">
 </iframe>
 <h3 id="rbi">RBI</h3>
+<p>Twitter's attitude toward this votation looked pretty positive. We can see the activity increasing when we approach the date of the votation, but there is no change of opinion before or after the votation. But Twitter was wrong since this votation was rejected by the swiss population.</p>
 <div class="figure">
 <img src="hist-rbi.png" />
 
 </div>
+<p>At first sight, it looks like there is a strong case of Röstigraben, but what is really happening is that we have no tweets coming from a large part of the German side of Switzerland. The reason may be the lack of hashtags in German related to this votation (we missed the hashtag #bge), but Zurich still stand out!</p>
 <iframe src="rbi_tweets.html" width="100%" height="400px">
 </iframe>
+<p>We then have some surprising results. We have Wallis that looks like a strong advocate for the RBI, but in the votation results it is one of the lowest proportion of 'yes' in the country. And Jury was a partisan of this law both in tweets and in votes. Those results make it hard to draw any conclusion from those graph.</p>
 <iframe src="rbi_sentiment.html" width="100%" height="400px">
 </iframe>
 <h2 id="conclusion">Conclusion</h2>
@@ -218,7 +224,7 @@ By Romain Gehrig, Thierry Treyer.</p>
 <p>The reasons behind those results may be:</p>
 <ol style="list-style-type: decimal">
 <li><strong>The swiss population doesn't use Twitter enough</strong><br />
-Over a whole year, having only thousands of tweets about a subject seems fairly low. We saw the distribution of tweets in the state does not follow the distribution of voters. It become hard to draw conclusions from the tweets if not enough people talk about the votations online.</li>
+Over a whole year, having only thousands of tweets about a subject seems fairly low. We saw the distribution of tweets in the state does not follow the distribution of voters. There is a huge bias toward state that are more internationally oriented, like Geneva and Zurich. It become hard to draw conclusions from the tweets if not enough people talk about the votations online.</li>
 <li><strong>The classifier is not good enough</strong><br />
 Taking a look at Spinn3r's sentiments, some of those seem really off. But this is not surprising considering the tweets are in three different languages, none of them being English. Also the classifier worked on the sentiment of the tweet and not the opinion in it, this might also skew the results.</li>
 </ol>

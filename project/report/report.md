@@ -1,7 +1,7 @@
 # Twitter Swiss Vote
 
 Final project for Applied Data Analysis (CS-401).  
-By Romain Gehrig, Thierry Treyer.
+By Romain Gehrig and Thierry Treyer.
 
 ## Introduction
 
@@ -134,17 +134,35 @@ We can now finally start analyzing the opinions of the people on those votations
 
 ### LRens
 
+This votation had a long live on social networks before it actually was voted with around 20 tweets about it per week for about 8 month, then we can observe a constant augmentation of the volume of the tweets seven weeks before the votation due to progressive discussion about it in the social environment.
+
 ![](hist-lrens.png)
 
+The illustration of the number of tweets per 1000 voters was chosen to show where the tech-savy users are, in this case around Zurich and Geneva and we don't think this is a coincidence that those cities are international ones!
+
 <iframe src="lrens_tweets.html" width="100%" height="400px"></iframe>
+
+Both Twitter and the swiss population approve this law!
 
 <iframe src="lrens_sentiment.html" width="100%" height="400px"></iframe>
 
 ### RBI
 
+Twitter's attitude toward this votation looked pretty positive.
+We can see the activity increasing when we approach the date of the votation, but there is no change of opinion before or after the votation.
+But Twitter was wrong since this votation was rejected by the swiss population.
+
 ![](hist-rbi.png)
 
+At first sight, it looks like there is a strong case of Röstigraben, but what is really happening is that we have no tweets coming from a large part of the German side of Switzerland.
+The reason may be the lack of hashtags in German related to this votation (we missed the hashtag #bge), but Zurich still stand out!
+
 <iframe src="rbi_tweets.html" width="100%" height="400px"></iframe>
+
+We then have some surprising results.
+We have Wallis that looks like a strong advocate for the RBI, but in the votation results it is one of the lowest proportion of 'yes' in the country.
+And Jury was a partisan of this law both in tweets and in votes.
+Those results make it hard to draw any conclusion from those graph.
 
 <iframe src="rbi_sentiment.html" width="100%" height="400px"></iframe>
 
@@ -158,7 +176,7 @@ The reasons behind those results may be:
 
   1. **The swiss population doesn't use Twitter enough**  
      Over a whole year, having only thousands of tweets about a subject seems fairly low.
-     We saw the distribution of tweets in the state does not follow the distribution of voters.
+     We saw the distribution of tweets in the state does not follow the distribution of voters. There is a huge bias toward state that are more internationally oriented, like Geneva and Zurich.
      It become hard to draw conclusions from the tweets if not enough people talk about the votations online.
   2. **The classifier is not good enough**  
      Taking a look at Spinn3r's sentiments, some of those seem really off.
