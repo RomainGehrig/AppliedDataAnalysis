@@ -142,7 +142,7 @@ The illustration of the number of tweets per 1000 voters was chosen to show wher
 
 <iframe src="lrens_tweets.html" width="100%" height="400px"></iframe>
 
-Both Twitter and the swiss population approve this law!
+Both Twitter and the Swiss population approve this law!
 
 <iframe src="lrens_sentiment.html" width="100%" height="400px"></iframe>
 
@@ -150,7 +150,7 @@ Both Twitter and the swiss population approve this law!
 
 Twitter's attitude toward this votation looked pretty positive.
 We can see the activity increasing when we approach the date of the votation, but there is no change of opinion before or after the votation.
-But Twitter was wrong since this votation was rejected by the swiss population.
+But Twitter was wrong since this votation was rejected by the Swiss population.
 
 ![](hist-rbi.png)
 
@@ -168,13 +168,13 @@ Those results make it hard to draw any conclusion from those graph.
 
 ## Conclusion
 
-It seems that using Twitter to estimate the opinion of the swiss population provide mitigated results.
+It seems that using Twitter to estimate the opinion of the Swiss population provide mitigated results.
 For the LRens votation, our analysis matched the opinions of the people.
 For the RBI votation, it is completely wrong.
 
 The reasons behind those results may be:
 
-  1. **The swiss population doesn't use Twitter enough**  
+  1. **The Swiss population doesn't use Twitter enough**  
      Over a whole year, having only thousands of tweets about a subject seems fairly low.
      We saw the distribution of tweets in the state does not follow the distribution of voters. There is a huge bias toward state that are more internationally oriented, like Geneva and Zurich.
      It become hard to draw conclusions from the tweets if not enough people talk about the votations online.
@@ -186,4 +186,4 @@ The reasons behind those results may be:
 We also didn't notice a change of opinion through time.
 We saw the activity increase before the votation, but no shift of positive or negative sentiment about the subject of the votation.
 
-Considering all those conclusions, it seems that swiss tweets do not represent the opinion of the swiss population.
+Considering all those elements, we learned more about the habits of the Swiss population when discussing votations on Twitter than their actual opinions related to these votations.
